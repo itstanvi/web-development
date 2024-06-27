@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set the width of the web page to follow the device's screen width */
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Create a flex container for the header, content, and footer */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Style the content */
+        .content {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+            overflow-y: auto; /* Enable scrolling if content is too tall */
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the header and footer span the entire screen and stack the content on top of each other */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Responsive Web Page</h1>
+        </header>
+        <div class="content">
+            <p>This is a responsive web page. The layout will adjust to different screen sizes.</p>
+            <!-- Add more content here -->
+        </div>
+        <footer>
+            <p>&copy; 2023 Responsive Web Page</p>
+        </footer>
+    </div>
+</body>
+</html>
