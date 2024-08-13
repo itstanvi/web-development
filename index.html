@@ -1,363 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Youtube Clone</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body style="background-color: #0f0f0f;">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-            <!-- Nav Bar Code Start -->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid p-0">
-                    <i class="bi bi-list yt-menu"></i>
-                  <a class="navbar-brand" href="#">
-                    <img src="./assets/image/logo.png"/>
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="yt-searchbox mx-auto position-relative">
-                        <input type="text" id="filtertext" placeholder="Search..." class="border-0 bg-transparent text-white"/>
-                        <span>
-                            <i class="bi bi-search"></i>
-                        </span>
-                        <div class="yt-search-dropdown">
-                            <section class="d-flex align-items-center justify-content-between yt-search-item">
-                                <p class="m-0">
-                                    <i class="bi bi-search"></i> 
-                                   <b>How To Increase Youtube Subscribers</b>
-                                </p>
-                                <a href="#">remove</a>
-                            </section>
-                            <section class="d-flex align-items-center justify-content-between yt-search-item">
-                                <p class="m-0">
-                                    <i class="bi bi-search"></i> 
-                                   <b>5 Hacks To Grow A Youtube Channel</b>
-                                </p>
-                                <a href="#">remove</a>
-                            </section>
-                            <section class="d-flex align-items-center justify-content-between yt-search-item">
-                                <p class="m-0">
-                                    <i class="bi bi-search"></i> 
-                                   <b>How To Make Youtubet Thumbnail</b>
-                                </p>
-                                <a href="#">remove</a>
-                            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        #main,#error{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="weather">
+        <div id="search">
+            <input type="text">
+            <button onclick="weather()"><img src="images/search.png" alt="" srcset=""></button>
+        </div>
+        <div id="main">
+            <img src="images/clear.png" alt="" srcset="">
+            <h1 id="temp">16°C</h1>
+            <h3 id="city">Delhi</h3>
+            <div>
+                <div class="col">
+                    <img src="images/humidity.png" alt="" srcset="">
+                    <div>
+                        <p id="humidity">17%</p>
+                        <p>Humidity</p>
                     </div>
-                  </div>
-                </div>
-                <div class="yt-action">
-                    <i class="bi bi-camera-video"></i>
-                    <i class="bi bi-bell"></i>
-                    <i class="bi bi-person-circle"></i>
-                </div>
-              </nav>
-              <!-- Nav Bar Code End -->
-
-
-
-    </div>
-    </div>
-    <div class="row">
-        <div class="col-12 d-flex">
-            <!-- Sidebar Code Start -->
-             <div class="yt-sidebar">
-                <nav>
-                    <i class="bi bi-house"></i>
-                    Home
-                </nav>
-                <nav>
-                    <i class="bi bi-lightning"></i>
-                    Shorts
-                </nav>
-                <nav>
-                    <i class="bi bi-camera-reels"></i>
-                    Subscriptions
-                </nav>
-                <nav>
-                    <i class="bi bi-clock-history"></i>
-                    History
-                </nav>
-                <nav>
-                    <i class="bi bi-file-earmark-music"></i>
-                    Playlist
-                </nav>
-                <nav>
-                    <i class="bi bi-download"></i>
-                    Downloads
-                </nav>
-             </div>
-            <!-- Sidebar Code End -->
-            <!-- Content Code Start -->
-             <div class="yt-video">
-                <div class="row">
-                    <div class="col-12 yt-tabs d-flex align-items-center">
-                        <nav class="active">All</nav>
-                        <nav>Html</nav>
-                        <nav>CSS</nav>
-                        <nav>Coding</nav>
-                        <nav>Leetcode Questions</nav>
-                        <nav>Softpro India Company</nav>
-                        <nav>Mern Stack Course Tutorial</nav>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt1.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">$456,000 Squid Game In Real Life!</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">63 crore . 2 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
+                    <div class="col">
+                        <img src="images/wind.png" alt="" srcset="">
+                        <div>
+                            <p id="wind">17%</p>
+                            <p>Wind</p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt2.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">Last To Leave Circle Wins $500,000</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">46 crore . 2 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt3.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">$1 vs $500,000 Plane Ticket!</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">40 crore . 2 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt4.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">Ages 1 - 100 Fight For $500,000</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">38 crore . 1 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt5.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">$1 vs $1,000,000 Hotel Room!</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">35 crore . 1 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt6.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">$1 vs $1,000,000,000 Yacht!</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">35 crore . 1 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt7.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">I Spent 50 Hours Buried : Alive</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">32 crore . 3 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt8.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">Would You Sit In Snakes: For $10,000?</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">32 crore . 3 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt9.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">$1 vs $100,000,000 Car!</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">31 crore . 10 Months ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt10.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">I Built Willy Wonka's Chocolate Factory!</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">31 crore . 2 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt11.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">$1 vs $250,000 Vacation!</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">28 crore . 11 Months ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="./assets/image/bt12.jpg" class="card-img-top" alt="...">
-                                <video src="./assets/v.mp4" muted autoplay loop></video>
-                                <div class="card-body">
-                                  <!-- logo -->
-                                   <div class="d-flex">
-                                   <section>
-                                    <img src="./assets/image/logomb.png" alt="..." width="30px">
-                                   </section>
-                                  <!-- Details -->
-                                   <section class="yt-details">
-                                   <p class="text-white m-0 mx-3 fs-5">100 Kids Vs 100 Adults For $500,000</p>
-                                   <p class="text-white-50 m-0 mx-3">Mr.Beast</p>
-                                   <p class="text-white-50 m-0 mx-3">26 crore . 1 years ago</p>
-                                   </section>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
                 </div>
             </div>
-            <!-- Content Code End -->
         </div>
+    
+    
     </div>
+<div id="error">
+    <h3>Invalid city name</h3>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
