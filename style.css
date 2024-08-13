@@ -1,56 +1,149 @@
-/*body{
-    background-color: red;
-}*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
 
-#box{
-    height: 400px;
-    width: 400px;
-    border: 1px solid black;
-    background-image: url(../img/clock.jpg);
-    background-size: cover;
+.yt-menu {
+    color: #fff;
+    font-size: 26px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
-    box-shadow: 0px 0px 30px 10px inset black;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    cursor: pointer;
 }
-#hr,#min,#sec,#point,#dc{
+.yt-menu:hover {
+    background-color: rgba(74, 73, 71, 0.47);
+}
+
+.yt-searchbox {
+    width: 60%;
+    display: flex;
+
+    padding: 5px 10px;
+}
+
+.yt-searchbox input {
+    width: 85%;
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    padding: 5px 10px;
+    outline: 1px solid rgba(177, 177, 177, 0.252);
+}
+
+.yt-searchbox span {
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    width: 60px;
+    background-color: rgba(87, 87, 87, 0.489);
+    border: 1px solid rgba(87, 87, 87, 0.489);
+    padding: 6px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.yt-searchbox span:hover {
+    background-color: rgb(127, 127, 127);
+}
+
+.yt-search-dropdown {
+    z-index: 100;
+    background: #fff;
+    height: max-content;
+    width: 80%;
+    border-radius: 10px;
+    padding: 5px 0px;
     position: absolute;
-    transform-origin: bottom;
+    top: 40px;
+    left: 20px;
+    display: none;
 }
-#hr{
-    height: 129px;
-    width: 5px;
-    background-color: red;
-    top: 71px;
-    left: 201px;
+
+.yt-search-item{
+    padding: 5px 10px;
+    cursor: pointer;
 }
-#min{
-    height: 159px;
-    width: 3px;
-    background-color: blue;
-    top: 41px;
-    left: 202px;
+
+
+.yt-searchbox:hover .yt-search-dropdown {
+    display: block !important;
 }
-#sec{
-    height: 130px;
-    width: 2px;
-    background-color: rgb(17, 15, 14);
-    left: 202px;
-    top: 71px;
+
+.yt-action .bi{
+    margin: 0px 15px;
+    cursor: pointer;
+    color: #ffffffcb;
 }
-#point{
-    height: 5px;
-    width: 5px;
-    left: 201px;
-    top: 197.5px;
-     background-color: rgb(237, 237, 237);
-     border-radius: 50%;
+
+.yt-action  .bi:hover{
+    color: red !important;
 }
-#dc{
-    box-shadow: 0px 0px 5px 5px grey;
-    padding: 5px;
-    top:230px;
-    left:185px;
-    border: black;
-    
+
+.yt-sidebar {
+    height: 100vh;
+    width: 15%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.yt-sidebar nav {
+    padding: 10px 10px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.yt-sidebar nav i {
+    margin-right: 12px;
+}
+
+.yt-sidebar nav:hover {
+    background-color: #ffffff15;
+}
+
+.yt-video {
+    height: 100vh;
+    width: 85%;
+    padding: 10px;
+}
+
+.yt-tabs .active {
+    background-color: #ffffff56;
+    border-radius: 5px;
+}
+
+.yt-tabs nav {
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.yt-tabs nav:hover {
+    background-color: #ffffff56;
+    border-radius: 5px;
+}
+
+.card {
+    background: transparent !important;
+    border: none !important;
+}
+
+.card video {
+    display: none;
+}
+
+.card:hover video {
+    display: block !important;
+}
+
+.card:hover .card-img-top {
+    display: none;
 }
